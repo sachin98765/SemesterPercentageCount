@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks and YGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <!-- Obtain Marks Section -->
+        <section>
+            <h2>Calculate Obtained Marks</h2>
+            <form id="marksForm">
+                <label for="oddSubjects">Number of subjects (1st/3rd/5th semesters):</label>
+                <input type="number" id="oddSubjects" required>
+
+                <label for="evenSubjects">Number of subjects (2nd/4th/6th semesters):</label>
+                <input type="number" id="evenSubjects" required>
+
+                <label for="percentage">Percentage obtained (%):</label>
+                <input type="number" id="percentage" required>
+
+                <button type="button" onclick="calculateMarks()">Calculate Marks</button>
+            </form>
+            <p id="marksResult"></p>
+        </section>
+
+        <!-- Final YGPA Section -->
+        <section>
+            <h2>Calculate Final YGPA</h2>
+            <form id="ygpaForm">
+                <label for="sgpa1">SGPA (1st semester):</label>
+                <input type="number" id="sgpa1" step="0.01" required>
+
+                <label for="sgpa2">SGPA (2nd semester):</label>
+                <input type="number" id="sgpa2" step="0.01" required>
+
+                <button type="button" onclick="calculateYGPA()">Calculate YGPA</button>
+            </form>
+            <p id="ygpaResult"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
